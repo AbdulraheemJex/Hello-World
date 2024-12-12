@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>test</title>
+	<style>
+		.container{ display: flex; background-color: black;
+					align-items: center; 
+					justify-content: space-around; 
+					flex-flow: column; width: 500px;
+				}
+		div div {width: 200px; height: 200px; margin: 20px; border-radius: 50px;}
+		.red{background-color: red;}
+		.yellow{background-color: yellow;}
+		.green{background-color: green;}
+		body{ display: flex; align-items: center; justify-content: space-around;}
+		
+	</style>
+  </head>
+  <body>
+	<div class="container">
+		<div class="red"></div>
+		<div class="yellow"></div>
+		<div class="green"></div>
+	</div>
+    
+	
+	<script src="https://cdn.jsdelivr.net/npm/motion@11.11.13/dist/motion.js"></script>
+    <script>
+      const { animate, scroll } = Motion;
+	  animate( ".red",
+	    {rotate: 180},
+	    {type: "spring", stiffness: 100, repeat: Infinity, repeatDelay: 0.5}	
+	    )
+    </script>
+  </body>
+</html>
